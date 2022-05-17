@@ -1,0 +1,50 @@
+<div class="row">
+  <h1>學生成績登記</h1>
+</div>
+<div class="row text-center">
+  <div col-lg-12>
+    <mat-card>
+      <h2>學生資料</h2>
+      <mat-form-field appearance="outline">
+        <mat-label>學生班級</mat-label>
+        <mat-select>
+          <mat-option value="one">資管二甲</mat-option>
+          <mat-option value="two">資管二乙</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>學生學號</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>學生姓名</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </mat-card>
+  </div>
+  <div col-lg-12>
+    <mat-card>
+      <h2>學生成績</h2>
+      <mat-card-actions>
+        <button mat-fab color="accent">新增一筆資料
+          <mat-icon>add</mat-icon>
+        </button>
+      </mat-card-actions>
+      <mat-form-field appearance="outline">
+        <mat-label>學生科目</mat-label>
+        <mat-select>
+          <mat-option value="one">國文</mat-option>
+          <mat-option value="two">英文</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>期中考成績</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>期末考成績</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div>
+  <h1>學生成績表格</h1>
+</div>
+<div class="container">
+  <div class="table">
+    <div class="table-container">
+
+      <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th><!-- 表格欄位的標題 -->
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td><!-- 表格的直行 -->
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> 名字 </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Height Column -->
+        <ng-container matColumnDef="height">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> 身高 </th>
+          <td mat-cell *matCellDef="let element"> {{element.height}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> 體重 </th>
+          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+    </div>
+    <!-- 分頁器 -->
+    <mat-paginator #paginator [length]="totalCount" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 15]"
+      [showFirstLastButtons]="true">
+    </mat-paginator><!-- 設定選單顯示一頁最多幾筆資料 -->
+  </div>
+</div>
+
