@@ -25,6 +25,8 @@ import { MatDialogModule} from '@angular/material/dialog';//dialog
 import { MatRadioModule} from '@angular/material/radio';//radio
 import { MatTabsModule} from '@angular/material/tabs';//tabs
 import { MatSelectModule} from '@angular/material/select';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';//tree會用到的
+
 //router
 import { RouterModule } from '@angular/router';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -35,6 +37,7 @@ import { TableComponent } from './table/table.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule} from '@angular/material/core';
 import { DialogComponent } from './form/dialog/dialog.component';
+import { ShopComponent } from './shop/shop.component';
 
 
 @NgModule({
@@ -45,8 +48,11 @@ import { DialogComponent } from './form/dialog/dialog.component';
     ManagerComponent,
     SurveyComponent,
     TableComponent,
-    DialogComponent
+    DialogComponent,
+    ShopComponent,
   ],
+  entryComponents: [DialogComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -75,6 +81,8 @@ import { DialogComponent } from './form/dialog/dialog.component';
     RouterModule,
     MatDatepickerModule,
     MatNativeDateModule,
+
+
     //import
 RouterModule.forRoot([
   {path:"form",component:FormComponent}
@@ -87,6 +95,9 @@ RouterModule.forRoot([
 ]),
 RouterModule.forRoot([
   {path:"table",component:TableComponent}
+]),
+RouterModule.forRoot([
+  {path:"shop",component:ShopComponent}
 ]),
 
   ],

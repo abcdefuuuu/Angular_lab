@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-form',
@@ -8,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
+  addDialog() {
+    this.dialog.open(DialogComponent);
+  }
   ngOnInit(): void {
 
   }
- 
+
 }

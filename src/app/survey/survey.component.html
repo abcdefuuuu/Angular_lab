@@ -2,103 +2,99 @@
   <h1>調查頁面</h1>
 </div>
 <div>
-  <mat-tab-group backgroundColor="accent">
+  <mat-tab-group>
     <mat-tab label="學生學籍資料">
       <div class="container">
-        <mat-card>
-          <div class="row text-center">
-            <div class="col">
-              <mat-form-field appearance="outline">
-                <mat-label>姓名</mat-label>
-                <input matInput>
-              </mat-form-field>
-            </div>
-            <div class="col-3">
-            </div>
-            <div class="col">
-              <mat-form-field appearance="outline">
-                <mat-label>期中考成績</mat-label>
-                <input matInput>
-              </mat-form-field>
-            </div>
+        <div class="row text-center">
+          <div class="col">
+            <mat-form-field appearance="outline">
+              <mat-label>姓名</mat-label>
+              <input matInput>
+            </mat-form-field>
           </div>
-          <div class="row text-center">
-            <div class="col">
-              <mat-form-field appearance="outline">
-                <mat-label>學號</mat-label>
-                <input matInput>
-              </mat-form-field>
-            </div>
-            <div class="col-3">
-            </div>
-            <div class="col">
-              <mat-form-field appearance="outline">
-                <mat-label>期末考成績</mat-label>
-                <input matInput>
-              </mat-form-field>
-            </div>
+          <div class="col-3">
           </div>
-          <div class="row text-center">
-            <div class="col">
-              <mat-form-field appearance="outline">
-                <mat-label>系級</mat-label>
-                <input matInput>
-              </mat-form-field>
-            </div>
-            <div class="col-3">
-            </div>
-            <div class="col">
-              <p>
-                <mat-radio-group aria-label="Select an option">
-                  <mat-radio-button value="1">男生</mat-radio-button>
-                  <mat-radio-button value="2">女生</mat-radio-button>
-                  <mat-radio-button value="2">其他</mat-radio-button>
-                </mat-radio-group>
-              </p>
-              <section class="example-section">
-                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
-                <mat-checkbox class="example-margin">Check me!</mat-checkbox>
-              </section>
-            </div>
+          <div class="col">
+            <mat-form-field appearance="outline">
+              <mat-label>期中考成績</mat-label>
+              <input matInput>
+            </mat-form-field>
           </div>
-          <div class="row text-center">
-            <div class="col">
-              <mat-form-field appearance="outline">
-                <mat-label>生日</mat-label>
-                <input matInput placeholder="yyyy/月/dd" [matDatepicker]="picker">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field>
-            </div>
-            <div class="col-4">
-            </div>
-            <div class="col-4">
-            </div>
+        </div>
+        <div class="row text-center">
+          <div class="col">
+            <mat-form-field appearance="outline">
+              <mat-label>學號</mat-label>
+              <input matInput>
+            </mat-form-field>
           </div>
-        </mat-card>
+          <div class="col-3">
+          </div>
+          <div class="col">
+            <mat-form-field appearance="outline">
+              <mat-label>期末考成績</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col">
+            <mat-form-field appearance="outline">
+              <mat-label>系級</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-3">
+          </div>
+          <div class="col">
+            <p>
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">男生</mat-radio-button>
+                <mat-radio-button value="2">女生</mat-radio-button>
+                <mat-radio-button value="2">其他</mat-radio-button>
+              </mat-radio-group>
+            </p>
+            <section class="example-section">
+              <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+              <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+            </section>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col">
+            <mat-form-field appearance="outline">
+              <mat-label>生日</mat-label>
+              <input matInput placeholder="yyyy/月/dd" [matDatepicker]="picker">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+          </div>
+          <div class="col-4">
+          </div>
+        </div>
       </div>
     </mat-tab>
     <mat-tab label="學生學期資料">
-      <mat-card>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <mat-form-field appearance="fill">
-                <mat-label>選擇一段時間</mat-label>
-                <mat-date-range-input [rangePicker]="picker">
-                  <input matStartDate placeholder="Start date">
-                  <input matEndDate placeholder="End date">
-                </mat-date-range-input>
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-date-range-picker #picker></mat-date-range-picker>
-              </mat-form-field>
-            </div>
-            <div class="col-6">
-              2 of 3 (wider)
-            </div>
-            <div class="col">
-              3 of 3
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>Enter a date range</mat-label>
+              <mat-date-range-input [rangePicker]="picker">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            2 of 3 (wider)
+          </div>
+          <div class="col">
+            3 of 3
           </div>
           <div class="row">
             <div class="col">
@@ -112,7 +108,7 @@
             </div>
           </div>
         </div>
-      </mat-card>
+      </div>
     </mat-tab>
     <mat-tab label="學生歷年成績">
       123
